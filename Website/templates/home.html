@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+        /* General Reset */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #004578;
+            color: #000000;
+        }
+
+        /* Navbar Styles */
+       /* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background-color: #004578; /* Deep blue navbar */
+    padding: 1rem 0;
+    margin: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: #FFFFFF; /* White text */
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #2AA09B; /* Teal hover */
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    color: #004578; /* Deep blue text */
+    background-color: #FFFFFF; /* White background */
+    border: 2px solid #004578;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background-color: #2AA09B; /* Teal hover */
+    color: #FFFFFF;
+}
+
+        /* Main Content */
+        main {
+            padding: 40px 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #004578;
+            color: white;
+        }
+
+        main h1 {
+            font-size: 2.2rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        main p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #c0b6b6;
+        }
+
+        main ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        main ul li {
+            font-size: 1rem;
+            padding: 10px 0;
+            border-bottom: 1px solid #DDD;
+        }
+
+        main ul li b {
+            color: #008000;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #000000;
+            color: #FDD017;
+        }
+
+        footer p {
+            font-size: 0.8rem;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav style="display: flex; background-color: #0049FF;  padding: 10px 0;">
+            <img style="width: 50px; background-color: #0049FF; padding-left: 10rem;" src="https://discoverstclaircollege.ca/wp-content/uploads/2024/08/Griffen-300x231.png" alt="">
+            <ul class="navbar" style="padding-left: 40rem; background-color: #0049FF;">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/data">Data</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Welcome to Our Project Website!</h1>
+            <p>Our goal is to solve real-world problems, explore innovative ideas, and showcase our abilities as we embark on this exciting journey.</p>
+            <p>We are a team of passionate and driven students — Alice, Anu, Faiyaz, Pradeep, and Abdur Rehman — coming together to create something extraordinary.</p>
+            <p>This website represents our collaborative effort for Saint Clair College's Python project, where we combine our diverse skills to deliver a unique and impactful platform.</p>
+            <a href="/about" class="btn">About</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Website. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

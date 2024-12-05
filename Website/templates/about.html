@@ -1,31 +1,168 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>Homepage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #6CF3B5; /* Mint green background */
+    color: #333333; /* Dark text */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background-color: #004578; /* Deep blue navbar */
+    padding: 1rem 0;
+    margin: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: #FFFFFF; /* White text */
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #2AA09B; /* Teal hover */
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #004578; /* Deep blue */
+    color: #FFFFFF; /* White text */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    color: #004578; /* Deep blue text */
+    background-color: #FFFFFF; /* White background */
+    border: 2px solid #004578;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background-color: #2AA09B; /* Teal hover */
+    color: #FFFFFF;
+}
+
+/* Main Content */
+main {
+    padding: 40px 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #E3FFF9; /* Light mint background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+main h1 {
+    font-size: 2.2rem;
+    color: #004578; /* Blue heading */
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #004578; /* Deep blue */
+    color: #FFFFFF; /* White text */
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #2AA09B; /* Teal links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #FFFFFF;
+}
+
+    </style>
 </head>
-<body style="padding: 0 5rem;">
-    <div style="display: flex; font-size: 4rem; justify-content: center; ">
-        <a style="text-decoration-line: none; color: orange; padding-right: 3rem;" href="/about">About</a>
-        <a style="text-decoration-line: none; color: orange;" href="/data">Data</a>
-    </div>
-    <h1>About the Dataset</h1>
-    <p>This dataset contains stock data for the top 10 video game companies.</p>
-    <h2>Variable Definitions</h2>
-    <ul>
-        <li><b>Date</b>: The date of the stock record.</li>
-        <li><b>Company</b>: The name of the video game company.</li>
-        <li><b>Ticker Symbol</b>: The stock's ticker symbol.</li>
-        <li><b>Currency</b>: The currency of the stock prices.</li>
-        <li><b>Open</b>: The opening price of the stock on the given day.</li>
-        <li><b>High</b>: The highest price of the stock on the given day.</li>
-        <li><b>Low</b>: The lowest price of the stock on the given day.</li>
-        <li><b>Close</b>: The closing price of the stock on the given day.</li>
-        <li><b>Adj Close</b>: The adjusted closing price after adjustments for splits, dividends, etc.</li>
-        <li><b>Volume</b>: The trading volume of the stock on the given day.</li>
-    </ul>
-    
+<body>
+    <header>
+        <nav style="display: flex; background-color: #0049FF;  padding: 10px 0;">
+            <img style="width: 50px; background-color: #0049FF; padding-left: 10rem;" src="https://discoverstclaircollege.ca/wp-content/uploads/2024/08/Griffen-300x231.png" alt="">
+            <ul class="navbar" style="padding-left: 40rem; background-color: #0049FF;">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/data">Data</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to the Dataset Portal</h1>
+        <p>Your resource for exploring stock data of top video game companies.</p>
+        <a href="/data" class="btn">Explore Data</a>
+    </section>
+
+    <main>
+        <h1>About the Dataset</h1>
+        <p>This dataset contains comprehensive stock data for the top 10 video game companies. It includes valuable insights for researchers, analysts, and enthusiasts.</p>
+        <h2>Variable Definitions</h2>
+        <ul>
+            <li><b>Date</b>: The date of the stock record.</li>
+            <li><b>Company</b>: The name of the video game company.</li>
+            <li><b>Ticker Symbol</b>: The stock's ticker symbol.</li>
+            <li><b>Currency</b>: The currency of the stock prices.</li>
+            <li><b>Open</b>: The opening price of the stock on the given day.</li>
+            <li><b>High</b>: The highest price of the stock on the given day.</li>
+            <li><b>Low</b>: The lowest price of the stock on the given day.</li>
+            <li><b>Close</b>: The closing price of the stock on the given day.</li>
+            <li><b>Adj Close</b>: The adjusted closing price after adjustments for splits, dividends, etc.</li>
+            <li><b>Volume</b>: The trading volume of the stock on the given day.</li>
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Dataset Portal. All Rights Reserved. | <a href="/privacy">Privacy Policy</a></p>
+    </footer>
 </body>
 </html>
